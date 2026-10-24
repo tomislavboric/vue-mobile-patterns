@@ -1,0 +1,39 @@
+{
+  "name": "vue-mobile-patterns",
+  "version": "0.1.0",
+  "description": "Mobile-first interaction patterns for Vue 3: swipe-to-dismiss bottom sheet, touch drag-to-reorder, a toast stack that refuses bursts, and a debounced autosave write coalescer.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Tomislav Borić",
+  "repository": "github:tomislavboric/vue-mobile-patterns",
+  "homepage": "https://tomislavboric.github.io/vue-mobile-patterns/",
+  "keywords": ["vue", "vue3", "mobile", "bottom-sheet", "swipe", "drag-and-drop", "reorder", "toast", "debounce", "autosave"],
+  "exports": {
+    ".": "./src/index.js",
+    "./BottomSheet.vue": "./src/components/BottomSheet.vue",
+    "./ToastStack.vue": "./src/components/ToastStack.vue",
+    "./core/toastQueue": "./src/core/toastQueue.js",
+    "./core/coalescedWriter": "./src/core/coalescedWriter.js"
+  },
+  "files": ["src"],
+  "sideEffects": ["*.vue"],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "demo": "vite",
+    "demo:build": "vite build",
+    "demo:preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/test-utils": "^2.4.11",
+    "happy-dom": "^20.10.5",
+    "vite": "^5.1.0",
+    "vitest": "^1.6.1",
+    "vue": "^3.5.13"
+  }
+}
